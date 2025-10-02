@@ -1,0 +1,381 @@
+/* Background gradient */
+.lng {
+  background: linear-gradient(135deg, #ffffff 0%, #be5635 50%, #197368 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Transparent card with subtle backdrop */
+.card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(190, 86, 53, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 8px 32px rgba(190, 86, 53, 0.2) !important;
+}
+
+/* Remove default blue focus and add green focus */
+.form-control:focus,
+.form-select:focus,
+input:focus,
+textarea:focus {
+  border-color: #197368 !important;
+  box-shadow: 0 0 0 0.2rem rgba(25, 115, 104, 0.25) !important;
+  outline: none !important;
+}
+
+/* DatePicker focus state */
+.react-datepicker__input-container input:focus {
+  border-color: #197368 !important;
+  box-shadow: none !important;
+}
+
+/* Custom select styling */
+.custom-select {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  border-color: #197368 !important;
+  box-shadow: 0 0 0 0.2rem rgba(25, 115, 104, 0.25) !important;
+}
+
+/* Form select styling */
+.form-select {
+  cursor: pointer;
+}
+
+.form-select option {
+  padding: 8px;
+  background-color: white;
+  color: #333;
+}
+
+.form-select option:hover {
+  background-color: #197368 !important;
+  color: white !important;
+}
+
+.form-select option:checked {
+  background-color: #197368 !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Select options styling */
+.custom-select option {
+  padding: 8px;
+}
+
+.custom-select option:hover,
+.custom-select option:focus,
+.custom-select option:checked {
+  background-color: #197368 !important;
+  color: white !important;
+}
+
+.custom-select option:checked {
+  background: linear-gradient(#197368, #197368);
+}
+
+/* Form labels */
+.form-label {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Button styling */
+.btn {
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon colors */
+.fa-calendar-alt,
+.fa-clock {
+  color: #be5635 !important;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 992px) {
+  .lng {
+    padding: 15px 0;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h5.fs-2 {
+    font-size: 1.5rem !important;
+  }
+
+  .card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .lng {
+    padding: 10px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #be5635 40%, #197368 100%);
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  h5.fs-2 {
+    font-size: 1.3rem !important;
+  }
+
+  .card {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .custom-select {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .custom-select option {
+    padding: 4px 8px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 14px;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  /* Button adjustments for mobile */
+  .btn {
+    min-width: 140px !important;
+    padding: 8px 16px !important;
+    font-size: 14px;
+  }
+
+  /* Stack buttons vertically on small screens */
+  .d-flex.gap-3 {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .d-flex.gap-3 .btn,
+  .d-flex.gap-3 a {
+    width: 100%;
+  }
+
+  .d-flex.gap-3 a .btn {
+    width: 100%;
+  }
+
+  /* Date and time picker responsive */
+  .d-flex.gap-3 .flex-fill {
+    width: 100%;
+  }
+
+  /* Textarea responsive */
+  textarea.form-control {
+    min-height: 100px !important;
+    font-size: 14px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem !important;
+    padding: 0 10px;
+  }
+
+  h5.fs-2 {
+    font-size: 1.2rem !important;
+  }
+
+  .card {
+    padding: 0.75rem !important;
+    border-radius: 12px;
+  }
+
+  .btn {
+    min-width: 120px !important;
+    padding: 8px 12px !important;
+    font-size: 13px;
+  }
+
+  .form-group.mb-3,
+  .form-group.mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Compact date/time section */
+  .d-flex.gap-3 {
+    gap: 0.5rem !important;
+  }
+}
+
+/* DatePicker custom styling */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  border: none !important;
+  padding: 0;
+  background: transparent;
+}
+
+/* React DatePicker header styling */
+.react-datepicker__header {
+  background-color: #197368 !important;
+  border-bottom: 1px solid #197368 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker__day-name {
+  color: white !important;
+}
+
+/* Selected day/time styling */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__time-list-item--selected {
+  background-color: #197368 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Hover states for days/times */
+.react-datepicker__day:hover,
+.react-datepicker__time-list-item:hover {
+  background-color: rgba(25, 115, 104, 0.3) !important;
+  color: #197368 !important;
+}
+
+/* Today's date */
+.react-datepicker__day--today {
+  font-weight: bold;
+  border: 2px solid #197368 !important;
+  color: #197368 !important;
+}
+
+/* Navigation arrows */
+.react-datepicker__navigation-icon::before {
+  border-color: white !important;
+}
+
+.react-datepicker__navigation:hover *::before {
+  border-color: #f0f0f0 !important;
+}
+
+/* Time list scrollbar */
+.react-datepicker__time-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.react-datepicker__time-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.react-datepicker__time-list::-webkit-scrollbar-thumb {
+  background: #197368;
+  border-radius: 4px;
+}
+
+.react-datepicker__time-list::-webkit-scrollbar-thumb:hover {
+  background: #145a52;
+}
+
+/* Month/Year dropdowns in calendar */
+.react-datepicker__month-dropdown,
+.react-datepicker__year-dropdown {
+  background-color: white;
+  border: 1px solid #197368;
+}
+
+.react-datepicker__month-option:hover,
+.react-datepicker__year-option:hover {
+  background-color: #197368 !important;
+  color: white !important;
+}
+
+.react-datepicker__month-option--selected_month,
+.react-datepicker__year-option--selected_year {
+  background-color: rgba(25, 115, 104, 0.2) !important;
+  color: #197368 !important;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Input border colors */
+.border {
+  border-color: #dee2e6 !important;
+}
+
+.border:focus-within {
+  border-color: #197368 !important;
+  box-shadow: 0 0 0 0.2rem rgba(25, 115, 104, 0.15);
+}
+
+/* Disabled input styling */
+.form-control:disabled,
+.form-select:disabled {
+  background-color: rgba(233, 236, 239, 0.5);
+  opacity: 0.7;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Ensure buttons maintain style inside links */
+a .btn {
+  width: 100%;
+}
+
+/* Button specific colors with hover effects */
+.btn[style*="background-color: #be5635"]:hover {
+  background-color: #a04929 !important;
+  border-color: #a04929 !important;
+}
+
+.btn[style*="background-color: #197368"]:hover {
+  background-color: #145a52 !important;
+  border-color: #145a52 !important;
+}

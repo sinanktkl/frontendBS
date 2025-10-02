@@ -1,0 +1,341 @@
+/* green:    #197368    */
+/* orange :  #be5635   */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(135deg, #be5635, #197368); */
+  /* background: linear-gradient( #be5635, #197368, #be5635); */
+  background: linear-gradient( #ffffff, #be5635, #ffffff);
+
+
+  padding: 20px;
+}
+
+/* Card wrapper - Glass effect */
+.login-card {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side - form */
+.login-form {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.login-form .logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffedcc;
+  margin-bottom: 20px;
+}
+
+.login-form h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.login-form h2 span {
+  color: #197368;
+  font-weight: bold;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form input:focus {
+  border-color: #197368;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Remember me */
+.remember {
+  display: flex;
+  align-items: center;   /* vertically center items */
+  gap: 8px;              /* space between checkbox and label */
+  margin-bottom: 20px;
+}
+
+.remember input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #197368;
+  cursor: pointer;
+  margin: 0;             /* remove any default margin */
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.remember label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;   /* ensures label text aligns with checkbox */
+  line-height: 1;
+  margin: 0;
+}
+
+
+
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.login-btn {
+  background: #be5635;
+  border: none;
+  color: white;
+}
+
+.login-btn:hover {
+  background: #a04b2e;
+}
+
+.signup-btn {
+  border: 2px solid #197368;
+  background: #197368;
+  color: white;
+}
+
+.signup-btn:hover {
+  border: 2px solid #115048;
+  background: #115048;
+  color: #ffffff;
+}
+
+/* Social */
+.social {
+  margin-top: auto;
+}
+
+.social p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Right side - Image */
+.login-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  background: transparent;
+}
+
+.login-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* Responsive Design */
+
+/* Medium devices */
+@media (max-width: 992px) {
+  .login-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .login-image {
+    height: 250px;
+  }
+
+  .login-form {
+    padding: 40px 30px;
+  }
+}
+
+/* Small devices */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .login-image {
+    order: -1;
+    height: 200px;
+  }
+
+  .login-image img {
+    padding: 10px;
+  }
+
+  .login-form {
+    padding: 30px 20px;
+  }
+
+  .login-form h2 {
+    font-size: 24px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .login-card {
+    border-radius: 15px;
+  }
+
+  .login-form {
+    padding: 20px 15px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .remember label {
+    font-size: 13px;
+  }
+
+  .social p {
+    font-size: 13px;
+  }
+
+  .icons {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+
+
+
+
+/* Container with rotating gradient */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Rotating gradient background */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background: linear-gradient(45deg, #be5635, #ffffff, #be5635, #ffffff, #be5635);
+  animation: rotate-gradient 8s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep card above rotating background */
+.login-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 900px;
+  max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}

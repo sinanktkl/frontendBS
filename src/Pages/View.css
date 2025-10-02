@@ -1,0 +1,311 @@
+.mainhead {
+  color: #be5635;
+}
+
+/* ===== Table Styling ===== */
+.table-custom {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.table-custom thead {
+  background-color: #be5635;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.table-custom thead th {
+  padding: 12px;
+  text-align: center;
+}
+
+.table-custom tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-custom tbody tr:hover {
+  background-color: #eaf3f1;
+  transition: 0.3s ease;
+}
+
+.table-custom td {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* ===== Action Buttons ===== */
+.action-buttons .btn-info {
+  background-color: #197368 !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.action-buttons .btn-info:hover {
+  background-color: #145c52 !important;
+}
+
+.action-buttons .btn-danger {
+  background-color: #be5635 !important;
+  border: none !important;
+}
+
+.action-buttons .btn-danger:hover {
+  background-color: #9e452b !important;
+}
+
+/* ===== Header Section (Total + Search) ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.top-bar p {
+  font-weight: 600;
+  color: #be5635;
+  margin: 0;
+}
+
+/* ===== Animated Placeholder Input ===== */
+.animated-placeholder {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.animated-placeholder input {
+  
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #be5635;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.animated-placeholder input:focus {
+  border: 2px solid #be5635;
+  outline: none;
+}
+
+.animated-placeholder span {
+  
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  color: #888;
+  pointer-events: none;
+  z-index: 1;
+  animation: scroll-text 9s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-100%) translateY(-50%);
+  }
+}
+
+/* ===== Search Box with Button ===== */
+.search-box {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+}
+
+.search-box input {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-box button {
+  background-color: #be5635;
+  border: 2px solid #be5635;
+  border-left: 2px solid #be5635;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #a04b2e;
+  border-color: #a04b2e;
+  border-left: 2px solid #be5635;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 993px) {
+  .action-buttons {
+    flex-direction: column !important;
+    gap: 5px !important;
+  }
+  .action-buttons button {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-custom {
+    font-size: 12px;
+  }
+  .table-custom th,
+  .table-custom td {
+    padding: 6px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .search-box button {
+    border-radius: 0 4px 4px 0;
+    border-left: 2px solid #be5635;
+  }
+}
+
+@media (max-width: 576px) {
+  .action-buttons {
+    flex-direction: column !important;
+    gap: 5px !important;
+  }
+  .action-buttons button {
+    width: 100% !important;
+  }
+}
+
+/* ===== Date Picker Responsive Fix ===== */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+}
+
+/* ===== Modal Responsive Styling ===== */
+.modal-dialog {
+  max-width: 900px;
+  margin: 1.75rem auto;
+}
+
+@media (min-width: 1200px) {
+  .modal-dialog {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 991px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-body .card {
+    padding: 1rem !important;
+  }
+  
+  .modal-body .row {
+    gap: 0.5rem;
+  }
+  
+  .modal-body .form-group {
+    margin-bottom: 0.75rem !important;
+  }
+}
+
+/* Stack Date and Time on small screens */
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+  
+  .modal-body {
+    padding: 0.75rem;
+  }
+  
+  .modal-body .card {
+    padding: 0.75rem !important;
+  }
+  
+  .d-flex.gap-3 {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .flex-fill {
+    width: 100% !important;
+  }
+  
+  .modal-body .form-group {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    padding: 0.75rem;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+  }
+}
+
+
+
+  .lng{
+ background: linear-gradient( #ffffff, #be5635, #ffffff);
+ min-height: 900px;
+  }
+
+
+
+
